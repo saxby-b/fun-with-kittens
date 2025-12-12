@@ -20,5 +20,13 @@ const pet = {
 
     }
 };
-return;
+return pet;
 }
+
+const fluffy = newCat("Fluffy", "Ragdoll");
+const snowball = newCat("Snowball", "Persian");
+const cookie = newCat("Cookie", "Tabby");
+const mittens = newCat("Mittens", "Burmese");
+const whiskers = newCat("Whiskers", "Norwegian Forest");
+
+console.log(fluffy, snowball, cookie, mittens, whiskers);
