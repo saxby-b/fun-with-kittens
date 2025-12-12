@@ -28,5 +28,16 @@ const snowball = newCat("Snowball", "Persian");
 const cookie = newCat("Cookie", "Tabby");
 const mittens = newCat("Mittens", "Burmese");
 const whiskers = newCat("Whiskers", "Norwegian Forest");
+/*const button = document.querySelector(button); */
+const catArray = [];
 
-console.log(fluffy, snowball, cookie, mittens, whiskers);
+catArray.push(snowball, cookie, mittens, whiskers, fluffy);
+console.log(catArray.length);
+const chooseCat = function() {
+    const randomCat = Math.floor(Math.random() * catArray.length);
+
+}
+
+/*button.addEventListener("click", chooseCat); */
+
+/*console.log(fluffy, snowball, cookie, mittens, whiskers); */
