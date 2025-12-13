@@ -28,7 +28,7 @@ const snowball = newCat("Snowball", "Persian");
 const cookie = newCat("Cookie", "Tabby");
 const mittens = newCat("Mittens", "Burmese");
 const whiskers = newCat("Whiskers", "Norwegian Forest");
-/*const button = document.querySelector(button); */
+/*const button = document.querySelector("button"); */
 const catArray = [];
 
 catArray.push(snowball, cookie, mittens, whiskers, fluffy);
