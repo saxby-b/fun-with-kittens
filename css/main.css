@@ -1,0 +1,23 @@
+body {
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    text-align: center;
+    
+}
+
