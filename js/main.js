@@ -39,11 +39,12 @@ const chooseCat = function() {
    /* const randomCat = Math.floor(Math.random() * catArray.length); */
   const randomCat = 0;
     if (randomCat == 0) {
-        img.src = "../img/ragdoll-cat.jpeg";
-       for(let key in fluffy) {
-        p.innerHTML = (key, fluffy[key]);
-           
-        }
+       if (img.classList.contains("fluffy-img")){
+        img.classList.remove("hidden");
+       }
+      p.innerHTML = `Name:${fluffy.name}<br> Breed:${fluffy.breed}<br> 
+      `;
+
 
 
 
