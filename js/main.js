@@ -29,11 +29,12 @@ const cookie = newCat("Cookie", "Tabby");
 const mittens = newCat("Mittens", "Burmese");
 const whiskers = newCat("Whiskers", "Norwegian Forest");
 const button = document.querySelector("button"); 
+const chosenCat = document.querySelector(".chosen-cat");
 const img = document.querySelector("img");
 const p = document.querySelector(".chosen-cat p");
 const catArray = [];
 
-catArray.push(snowball, cookie, mittens, whiskers, fluffy);
+catArray.push(fluffy, snowball, cookie, mittens, whiskers );
 console.log(catArray.length);
 const chooseCat = function() {
    /* const randomCat = Math.floor(Math.random() * catArray.length); */
@@ -44,9 +45,13 @@ const chooseCat = function() {
        }
       p.innerHTML = `Name:${fluffy.name}<br> Breed:${fluffy.breed}<br> 
       `;
+      const playButton = document.createElement("button");
+      playButton.innerHTML = `Play Time`;
+
+      chosenCat.append(playButton);
 
 
-
+      playButton.addEventListener("click", fluffy.playTime);
 
     }
 
@@ -54,5 +59,6 @@ const chooseCat = function() {
 }
 
 button.addEventListener("click", chooseCat); 
+
 
 /*console.log(fluffy, snowball, cookie, mittens, whiskers); */
