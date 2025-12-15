@@ -11,6 +11,13 @@ h1 {
     text-align: center;
 }
 
+img {
+    width: 50%;
+    object-fit: contain;
+    justify-self: center;
+}
+
+
 p {
     width: 100%;
     text-align: center;
@@ -19,5 +26,9 @@ p {
 button {
     text-align: center;
     
+}
+
+.hidden{
+    display: none;
 }
 
