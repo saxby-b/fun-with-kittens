@@ -1,3 +1,8 @@
+html {
+     border: 20px solid hsl(223, 24%, 50%);
+}
+
+
 body {
     display: flex;
    justify-content: center;
