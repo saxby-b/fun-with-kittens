@@ -1,3 +1,4 @@
+const p = document.querySelector(".chosen-cat p");
 const newCat = function (name, breed) {
   const pet = {
     name: name,
@@ -9,10 +10,10 @@ const newCat = function (name, breed) {
     },
     playTime: function () {
       if (this.needsSleep === 10) {
-        console.log(`${this.name} is too sleepy to play.`);
+        p.textContent =`${this.name} is too sleepy to play.`;
         this.nap();
       } else {
-        console.log(`${this.name} loves to play!`);
+        p.textContent = `${this.name} loves to play!`;
         this.needsSleep += 1;
       }
     },
@@ -28,11 +29,11 @@ const whiskers = newCat("Whiskers", "Norwegian Forest");
 const button = document.querySelector("button");
 const chosenCat = document.querySelector(".chosen-cat");
 const img = document.querySelector("img");
-const p = document.querySelector(".chosen-cat p");
 const catArray = [];
 
 catArray.push(fluffy, snowball, cookie, mittens, whiskers);
 console.log(catArray.length);
+
 const chooseCat = function () {
   /* const randomCat = Math.floor(Math.random() * catArray.length); */
   const randomCat = 0;
