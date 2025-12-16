@@ -5,17 +5,16 @@ const pet = {
     needsSleep: 5,
     nap: function () {
     `${this.name} needs a nap!`;
-    this.isTired = 1;
+    this.needsSleep = 1;
     },
     playTime: function () {
-        if(isTired = 10) {
+        if(this.needsSleep === 10) {
             console.log(`${this.name} is too sleepy to play.`);
             this.nap();
-        return;
         }
         else {
-            console.log(`${name} loves to play!`);
-            this.isTired +1;
+            console.log(`${this.name} loves to play!`);
+            this.needsSleep += 1;
         }
 
     }
