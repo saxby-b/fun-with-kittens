@@ -1,4 +1,4 @@
-const p = document.querySelector(".chosen-cat p");
+const fun = document.querySelector(".fun");
 const newCat = function (name, breed) {
   const pet = {
     name: name,
@@ -10,10 +10,10 @@ const newCat = function (name, breed) {
     },
     playTime: function () {
       if (this.needsSleep === 10) {
-        p.textContent =`${this.name} is too sleepy to play.`;
+        fun.textContent =`${this.name} is too sleepy to play.`;
         this.nap();
       } else {
-        p.textContent = `${this.name} loves to play!`;
+        fun.textContent = `${this.name} loves to play!`;
         this.needsSleep += 1;
       }
     },
@@ -26,6 +26,7 @@ const snowball = newCat("Snowball", "Persian");
 const cookie = newCat("Cookie", "Tabby");
 const mittens = newCat("Mittens", "Burmese");
 const whiskers = newCat("Whiskers", "Norwegian Forest");
+const facts = document.querySelector(".facts");
 const button = document.querySelector("button");
 const chosenCat = document.querySelector(".chosen-cat");
 const img = document.querySelector("img");
@@ -41,17 +42,24 @@ const chooseCat = function () {
     if (img.classList.contains("fluffy-img")) {
       img.classList.remove("hidden");
     }
-    p.innerHTML = `Name:${fluffy.name}<br> Breed:${fluffy.breed}<br> 
+    facts.innerHTML = `Name:${fluffy.name}<br> Breed:${fluffy.breed}<br> 
       `;
     const playButton = document.createElement("button");
     playButton.innerHTML = `Play Time`;
 
     chosenCat.append(playButton);
 
-    playButton.addEventListener("click", fluffy.playTime);
+    const play = function () {
+        fun.classList.remove("hidden");
+        fluffy.playTime();
+    }
+    playButton.addEventListener("click", play);
+
+   
   }
 };
 
 button.addEventListener("click", chooseCat);
+
 
 /*console.log(fluffy, snowball, cookie, mittens, whiskers); */
