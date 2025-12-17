@@ -45,14 +45,20 @@ const chooseCat = function () {
   console.log(randomCat);
   if (randomCat == 0) {
     fluffyImg.classList.remove("hidden");
+    facts.innerHTML = `Name: ${fluffy.name}<br> Breed: ${fluffy.breed}<br> `
+  
   } else if (randomCat == 1) {
     snowballImg.classList.remove("hidden");
+    facts.innerHTML = `Name: ${snowball.name}<br> Breed: ${snowball.breed}<br> `
   } else if (randomCat == 2) {
     cookieImg.classList.remove("hidden");
+    facts.innerHTML = `Name: ${cookie.name}<br> Breed: ${cookie.breed}<br> `
   } else if (randomCat == 3) {
     mittensImg.classList.remove("hidden");
+    facts.innerHTML = `Name: ${mittens.name}<br> Breed: ${mittens.breed}<br> `
   } else {
     whiskersImg.classList.remove("hidden");
+    facts.innerHTML = `Name: ${whiskers.name}<br> Breed: ${whiskers.breed}<br> `
   }
 };
 
