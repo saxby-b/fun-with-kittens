@@ -40,6 +40,11 @@ catArray.push(fluffy, snowball, cookie, mittens, whiskers);
 console.log(catArray.length);
 
 const chooseCat = function () {
+    if(chosenCat.classList.contains("hidden") && facts.classList.contains("hidden")) {
+         chosenCat.classList.remove("hidden");
+         facts.classList.remove("hidden"); 
+    }
+ 
   const randomCat = Math.floor(Math.random() * catArray.length);
 
   console.log(randomCat);
@@ -83,6 +88,12 @@ const chooseCat = function () {
    
   } 
 }; */
+
+const press = function() {
+    document.querySelectorAll("img").classList.add("hidden");
+    facts.classList.add("hidden");
+    chooseCat();
+}
 
 button.addEventListener("click", chooseCat);
 
