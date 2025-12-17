@@ -27,6 +27,7 @@ img {
     width: 50%;
     object-fit: contain;
     justify-self: center;
+    height: 450px;
 }
 
 
