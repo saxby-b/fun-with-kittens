@@ -10,7 +10,7 @@ const newCat = function (name, breed) {
     },
     playTime: function () {
       if (this.needsSleep === 10) {
-        fun.textContent =`${this.name} is too sleepy to play.`;
+        fun.textContent = `${this.name} is too sleepy to play.`;
         this.nap();
       } else {
         fun.textContent = `${this.name} loves to play!`;
@@ -29,15 +29,34 @@ const whiskers = newCat("Whiskers", "Norwegian Forest");
 const facts = document.querySelector(".facts");
 const button = document.querySelector("button");
 const chosenCat = document.querySelector(".chosen-cat");
-const img = document.querySelector("img");
+const fluffyImg = document.querySelector(".fluffy-img");
+const snowballImg = document.querySelector(".snowball-img");
+const cookieImg = document.querySelector(".cookie-img");
+const mittensImg = document.querySelector(".mittens-img");
+const whiskersImg = document.querySelector(".whiskers-img");
 const catArray = [];
 
 catArray.push(fluffy, snowball, cookie, mittens, whiskers);
 console.log(catArray.length);
 
 const chooseCat = function () {
-  /* const randomCat = Math.floor(Math.random() * catArray.length); */
-  const randomCat = 0;
+  const randomCat = Math.floor(Math.random() * catArray.length);
+
+  console.log(randomCat);
+  if (randomCat == 0) {
+    fluffyImg.classList.remove("hidden");
+  } else if (randomCat == 1) {
+    snowballImg.classList.remove("hidden");
+  } else if (randomCat == 2) {
+    cookieImg.classList.remove("hidden");
+  } else if (randomCat == 3) {
+    mittensImg.classList.remove("hidden");
+  } else {
+    whiskersImg.classList.remove("hidden");
+  }
+};
+
+/* const randomCat = 0;
   if (randomCat == 0) {
     if (img.classList.contains("fluffy-img")) {
       img.classList.remove("hidden");
@@ -56,10 +75,9 @@ const chooseCat = function () {
     playButton.addEventListener("click", play);
 
    
-  }
-};
+  } 
+}; */
 
 button.addEventListener("click", chooseCat);
-
 
 /*console.log(fluffy, snowball, cookie, mittens, whiskers); */
