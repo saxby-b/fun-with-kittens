@@ -53,19 +53,41 @@ const chooseCat = function () {
   console.log(randomCat);
   if (randomCat == 0) {
     fluffyImg.classList.remove("hidden");
+    cookie.classList.add("hidden");
+    snowballImg.classList.add("hidden");
+    mittensImg.classList.add("hidden");
+    whiskersImg.classList.add("hidden");
     facts.innerHTML = `Name: ${fluffy.name}<br> Breed: ${fluffy.breed}<br> `
   
   } else if (randomCat == 1) {
     snowballImg.classList.remove("hidden");
+    fluffyImg.classList.add("hidden");
+    cookie.classList.add("hidden");
+    mittensImg.classList.add("hidden");
+    whiskersImg.classList.add("hidden");
+
     facts.innerHTML = `Name: ${snowball.name}<br> Breed: ${snowball.breed}<br> `
   } else if (randomCat == 2) {
     cookieImg.classList.remove("hidden");
+    fluffyImg.classList.add("hidden");
+    snowballImg.classList.add("hidden");
+    mittensImg.classList.add("hidden");
+    whiskersImg.classList.add("hidden");
     facts.innerHTML = `Name: ${cookie.name}<br> Breed: ${cookie.breed}<br> `
   } else if (randomCat == 3) {
     mittensImg.classList.remove("hidden");
+    fluffyImg.classList.add("hidden");
+    cookie.classList.add("hidden");
+    snowballImg.classList.add("hidden");
+    whiskersImg.classList.add("hidden");
     facts.innerHTML = `Name: ${mittens.name}<br> Breed: ${mittens.breed}<br> `
   } else {
     whiskersImg.classList.remove("hidden");
+    fluffyImg.classList.add("hidden");
+    cookie.classList.add("hidden");
+    snowballImg.classList.add("hidden");
+    mittensImg.classList.add("hidden");
+    whiskersImg.classList.add("hidden");
     facts.innerHTML = `Name: ${whiskers.name}<br> Breed: ${whiskers.breed}<br> `
   }
 };
@@ -99,12 +121,12 @@ const startOver = function() {
     facts.classList.add("hidden"); */
 }
 
-const playAgain = function() {
+/*const playAgain = function() {
     chosenCat.classList.remove("hidden");
-   /* chosenCat.innerText = chooseCat.value; */
+   
     chooseCat();
 
-}
+}  */
 
 chooseCatButton.addEventListener("click", chooseCat);
 startOverButton.addEventListener("click", startOver);
