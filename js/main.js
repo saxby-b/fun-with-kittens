@@ -45,7 +45,13 @@ console.log(catArray.length);
 const random = function() {
 
   const randomCat = Math.floor(Math.random() * catArray.length);
-  console.log(randomCat);
+ const newCat = catArray[randomCat];
+
+ facts.innerHTML = `Name:${newCat.name}<br>Breed:${newCat.breed}`;
+
+
+
+  
 }
 
 
