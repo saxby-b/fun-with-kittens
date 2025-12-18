@@ -42,7 +42,21 @@ const nothing = "";
 catArray.push(fluffy, snowball, cookie, mittens, whiskers);
 console.log(catArray.length);
 
-const chooseCat = function () {
+const random = function() {
+
+  const randomCat = Math.floor(Math.random() * catArray.length);
+  console.log(randomCat);
+}
+
+
+
+chooseCatButton.addEventListener("click", random);
+
+
+
+
+
+/*const chooseCat = function () {
     if(chosenCat.classList.contains("hidden") && facts.classList.contains("hidden")) {
          chosenCat.classList.remove("hidden");
          facts.classList.remove("hidden"); 
@@ -114,12 +128,12 @@ const chooseCat = function () {
   } 
 }; */
 
-const startOver = function() {
-    chosenCat.classList.add("hidden");
-   /* chosenCat.innerText = nothing; */
-   /* document.querySelectorAll("img").classList.add("hidden");
+const startOver = function () {
+  chosenCat.classList.add("hidden");
+  /* chosenCat.innerText = nothing; */
+  /* document.querySelectorAll("img").classList.add("hidden");
     facts.classList.add("hidden"); */
-}
+};
 
 /*const playAgain = function() {
     chosenCat.classList.remove("hidden");
@@ -128,9 +142,8 @@ const startOver = function() {
 
 }  */
 
-chooseCatButton.addEventListener("click", chooseCat);
+/*chooseCatButton.addEventListener("click", chooseCat);
 startOverButton.addEventListener("click", startOver);
 playAgainButton.addEventListener("click", playAgain);
 
-
-/*console.log(fluffy, snowball, cookie, mittens, whiskers); */
+console.log(fluffy, snowball, cookie, mittens, whiskers); */
