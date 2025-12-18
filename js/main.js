@@ -52,7 +52,7 @@ const random = function () {
   const randomCat = Math.floor(Math.random() * catArray.length);
   const newCat = catArray[randomCat];
 
-  facts.innerHTML = `Name:${newCat.name}<br>Breed:${newCat.breed}`;
+  facts.innerHTML = `Name: ${newCat.name}<br>Breed: ${newCat.breed}`;
   newCat.img.classList.remove("hidden");
 };
 
