@@ -1,4 +1,3 @@
-
 const newCat = function (name, breed) {
   const pet = {
     name: name,
@@ -31,10 +30,11 @@ const snowballImg = document.querySelector(".snowball-img");
 const cookieImg = document.querySelector(".cookie-img");
 const mittensImg = document.querySelector(".mittens-img");
 const whiskersImg = document.querySelector(".whiskers-img");
-const imgContainer = document.querySelector(".img-container")
+const imgContainer = document.querySelector(".img-container");
 const facts = document.querySelector(".facts");
 const button = document.querySelector(".find");
 const playAgain = document.querySelector(".play-again");
+const imgs = document.querySelectorAll("img");
 
 const catArray = [];
 
@@ -47,11 +47,6 @@ whiskers.img = whiskersImg;
 catArray.push(fluffy, snowball, cookie, mittens, whiskers);
 console.log(catArray.length);
 
-const again = function() {
-    button.classList.add("hidden");
-    random();
-
-}
 
 const random = function () {
   const randomCat = Math.floor(Math.random() * catArray.length);
@@ -59,15 +54,13 @@ const random = function () {
 
   facts.innerHTML = `Name:${newCat.name}<br>Breed:${newCat.breed}`;
   newCat.img.classList.remove("hidden");
-
-playAgain.onclick = function() {
-    newCat.img.classList.add("hidden");
-}
- 
 };
 
-
-
+const again = function() {
+  button.classList.add("hidden");
+  imgs.classList.add("hidden");
+  random();
+};
 
 button.addEventListener("click", random);
 playAgain.addEventListener("click", again);
