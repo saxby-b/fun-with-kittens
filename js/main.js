@@ -35,7 +35,6 @@ const facts = document.querySelector(".facts");
 const button = document.querySelector(".find");
 const playAgain = document.querySelector(".play-again");
 
-
 const catArray = [];
 
 fluffy.img = fluffyImg;
@@ -47,25 +46,21 @@ whiskers.img = whiskersImg;
 catArray.push(fluffy, snowball, cookie, mittens, whiskers);
 console.log(catArray.length);
 
-
 const random = function () {
   const randomCat = Math.floor(Math.random() * catArray.length);
   const newCat = catArray[randomCat];
 
   facts.innerHTML = `Name: ${newCat.name}<br>Breed: ${newCat.breed}`;
-  newCat.img.classList.remove("hidden"); 
+  newCat.img.classList.remove("hidden");
 };
 
-
-
-const again = function() {
+const again = function () {
   button.classList.add("hidden");
-  /*imgs.classList.add("hidden");*/
   const imgs = document.querySelectorAll("img");
-  for(i = 0; i < imgs.length; ++i) {
+  for (i = 0; i < imgs.length; ++i) {
     imgs[i].classList.add("hidden");
   }
-  random(); 
+  random();
 };
 
 button.addEventListener("click", random);
