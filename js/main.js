@@ -65,7 +65,7 @@ const again = function() {
   for(i = 0; i < imgs.length; ++i) {
     imgs[i].classList.add("hidden");
   }
- /* random(); */
+  random(); 
 };
 
 button.addEventListener("click", random);
