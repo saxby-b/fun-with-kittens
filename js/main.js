@@ -1,3 +1,5 @@
+const fun = document.createElement("p");
+
 const newCat = function (name, breed) {
   const pet = {
     name: name,
@@ -30,6 +32,7 @@ const snowballImg = document.querySelector(".snowball-img");
 const cookieImg = document.querySelector(".cookie-img");
 const mittensImg = document.querySelector(".mittens-img");
 const whiskersImg = document.querySelector(".whiskers-img");
+const chosenCat = document.querySelector(".chosen-cat");
 const imgContainer = document.querySelector(".img-container");
 const facts = document.querySelector(".facts");
 const button = document.querySelector(".find");
@@ -52,10 +55,24 @@ const random = function () {
 
   facts.innerHTML = `Name: ${newCat.name}<br>Breed: ${newCat.breed}`;
   newCat.img.classList.remove("hidden");
+  button.classList.add("hidden");
+
+  /* const playButton = document.createElement("button");
+  playButton.innerHTML = "Play Time";
+  playButton.classList.add("play-button");
+  chosenCat.append(playButton);
+  chosenCat.append(fun); 
+
+  playButton.addEventListener("click", newCat.playTime) */
 };
 
 const again = function () {
-  button.classList.add("hidden");
+  /*const del = function(e) {
+    if(e.classList.contains("play-button")) {
+        e.classList.add("hidden");
+    } 
+} */
+
   const imgs = document.querySelectorAll("img");
   for (i = 0; i < imgs.length; ++i) {
     imgs[i].classList.add("hidden");
