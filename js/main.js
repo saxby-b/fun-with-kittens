@@ -57,21 +57,20 @@ const random = function () {
   newCat.img.classList.remove("hidden");
   button.classList.add("hidden");
 
-  /* const playButton = document.createElement("button");
+  const playButton = document.createElement("button");
   playButton.innerHTML = "Play Time";
   playButton.classList.add("play-button");
   chosenCat.append(playButton);
-  chosenCat.append(fun); 
+  chosenCat.append(fun);
 
-  playButton.addEventListener("click", newCat.playTime) */
+  playButton.addEventListener("click", newCat.playTime);
 };
 
 const again = function () {
-  /*const del = function(e) {
-    if(e.classList.contains("play-button")) {
-        e.classList.add("hidden");
-    } 
-} */
+  const buttons = document.querySelectorAll(".play-button");
+  for (i = 0; i < buttons.length; ++i) {
+    buttons[i].classList.add("hidden");
+  }
 
   const imgs = document.querySelectorAll("img");
   for (i = 0; i < imgs.length; ++i) {
