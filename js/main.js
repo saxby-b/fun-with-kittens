@@ -6,7 +6,7 @@ const newCat = function (name, breed) {
     breed: breed,
     needsSleep: 5,
     nap: function () {
-      `${this.name} needs a nap!`;
+     fun.textContent = `${this.name} needs a nap!`;
       this.needsSleep = 1;
     },
     playTime: function () {
@@ -76,6 +76,8 @@ const again = function () {
   for (i = 0; i < imgs.length; ++i) {
     imgs[i].classList.add("hidden");
   }
+
+  fun.textContent = "";
   random();
 };
 
