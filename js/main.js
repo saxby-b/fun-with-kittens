@@ -6,7 +6,7 @@ const newCat = function (name, breed) {
     breed: breed,
     needsSleep: 5,
     nap: function () {
-     fun.textContent = `${this.name} needs a nap!`;
+      fun.textContent = `${this.name} needs a nap!`;
       this.needsSleep = 1;
     },
     playTime: function () {
@@ -39,7 +39,6 @@ const button = document.querySelector(".find");
 const playAgain = document.querySelector(".play-again");
 
 const catArray = [];
-
 fluffy.img = fluffyImg;
 snowball.img = snowballImg;
 cookie.img = cookieImg;
