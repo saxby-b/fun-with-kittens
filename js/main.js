@@ -5,19 +5,6 @@ const newCat = function (name, breed) {
     name: name,
     breed: breed,
     needsSleep: 5,
-    nap: function () {
-      fun.textContent = `${this.name} needs a nap!`;
-      this.needsSleep = 1;
-    },
-    playTime: function () {
-      if (this.needsSleep === 10) {
-        fun.textContent = `${this.name} is too sleepy to play.`;
-        this.nap();
-      } else {
-        fun.textContent = `${this.name} loves to play!`;
-        this.needsSleep += 1;
-      }
-    },
   };
   return pet;
 };
@@ -56,13 +43,28 @@ const random = function () {
   newCat.img.classList.remove("hidden");
   button.classList.add("hidden");
 
+  const nap = function () {
+    fun.textContent = `${newCat.name} needs a nap!`;
+    newCat.needsSleep = 1;
+  };
+
+  const playTime = function () {
+    if (newCat.needsSleep === 10) {
+      fun.textContent = `${newCat.name} is too sleepy to play.`;
+      nap();
+    } else {
+      fun.textContent = `${newCat.name} loves to play!`;
+      this.needsSleep += 1;
+    }
+  };
+
   const playButton = document.createElement("button");
   playButton.innerHTML = "Play Time";
   playButton.classList.add("play-button");
   chosenCat.append(playButton);
   chosenCat.append(fun);
 
-  playButton.addEventListener("click", newCat.playTime);
+  playButton.addEventListener("click", playTime);
 };
 
 const again = function () {
