@@ -54,7 +54,7 @@ const random = function () {
       nap();
     } else {
       fun.textContent = `${newCat.name} loves to play!`;
-      this.needsSleep += 1;
+      newCat.needsSleep += 1;
     }
   };
 
