@@ -16,6 +16,7 @@ h1 {
     text-align: center;
 }
 .chosen-cat {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +34,7 @@ img {
     width: 50%;
     object-fit: contain;
     justify-self: center;
-    height: 450px;
+   /* height: 650px; */
 }
 
 
@@ -44,11 +45,21 @@ p {
 
 button {
     text-align: center;
-    
-    
+    background-color: #e6ccff;   
+    border-radius: 12px;
+    border: 1px solid #e6ccff;
+}
+
+button:hover {
+    background-color: #e6ccff;
 }
 
 .hidden{
     display: none;
 }
 
+@media screen and (min-width: 768px) {
+    img {
+        height: 450px;
+    }
+}
