@@ -9,6 +9,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    background-color: #ccffcc;
 }
 
 h1 {
@@ -39,8 +40,10 @@ img {
 
 
 p {
-    width: 100%;
+    width: 50%;
     text-align: center;
+     border: 2px solid #ffe6ff;
+     background-color:  #fff;
 }
 
 button {
