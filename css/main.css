@@ -42,6 +42,14 @@ img {
 p {
     width: 50%;
     text-align: center;
+}
+
+p.facts {
+ border: 2px solid #ffe6ff;
+     background-color:  #fff;
+}
+
+.play {
      border: 2px solid #ffe6ff;
      background-color:  #fff;
 }
@@ -60,7 +68,9 @@ button:hover {
 
 .hidden{
     display: none;
+    border: none;
 }
+
 
 @media screen and (min-width: 768px) {
     img {
