@@ -49,8 +49,6 @@ const random = function () {
   };
 
   const playTime = function () {
-   /* fun.classList.add("play"); */
-
     if (newCat.needsSleep === 10) {
       fun.textContent = `${newCat.name} is too sleepy to play.`;
       nap();
@@ -58,6 +56,8 @@ const random = function () {
       fun.textContent = `${newCat.name} loves to play!`;
       newCat.needsSleep += 1;
     }
+     fun.classList.add("play");
+   return;
   };
 
   const playButton = document.createElement("button");
