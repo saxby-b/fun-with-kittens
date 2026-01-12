@@ -49,6 +49,8 @@ const random = function () {
   };
 
   const playTime = function () {
+   /* fun.classList.add("play"); */
+
     if (newCat.needsSleep === 10) {
       fun.textContent = `${newCat.name} is too sleepy to play.`;
       nap();
