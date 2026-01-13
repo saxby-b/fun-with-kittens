@@ -1,5 +1,5 @@
 html {
-     border: 20px solid hsl(223, 24%, 50%);
+     border: 20px solid #ffe6ff;
 }
 
 
@@ -9,12 +9,13 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    background-color: #ccffcc;
+    background-color: #4ddbff;
 }
 
 h1 {
     width: 100%;
     text-align: center;
+    color: #fff;
 }
 .chosen-cat {
     width: 100%;
